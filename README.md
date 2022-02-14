@@ -1,6 +1,6 @@
 # Word List
 
-This is an individual project to practice working on a full HTML/CSS/JS website. Most of the code is already written, just some parts are missing. You can see how the website _should_ behave by running [./demo.html](./demo.html) in your browser. Your goal is not just to fill in the missing bits of code but to practice using the code review and quality checks - both locally and on GitHub with CI checks on each PR to `main`/`master`.
+An individual project to practice working on a full HTML/CSS/JS website. Most of the code is already written, just some parts are missing. You can see how the website _should_ behave by running [./demo.html](./demo.html) in your browser. Your goal is not just to fill in the missing bits of code but to practice using the code review and quality checks - both locally and on GitHub with CI checks on each PR to `main`/`master`.
 
 There are 3 files that need to be completed:
 
