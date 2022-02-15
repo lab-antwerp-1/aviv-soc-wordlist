@@ -38,6 +38,7 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
   return tempArray;
 };
 
+// refeence
 /*
 sortStrings = (a = [], b = 'oldest') => {
           let c;
