@@ -20,7 +20,7 @@ export const sortWords = (event) => {
     sort the words in data.words using the logic function
     assign the newly sorted list to a variable named `sorted`
   */
-
+  const sorted = sortStrings(data.words, howToSort);
   // ... write some code ...
 
   /* -- render new words -- */
