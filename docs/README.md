@@ -48,6 +48,24 @@
 
 <details><summary><a href="../../client/src/components/render-list.js" id="clientsrccomponentsrender-listjs">../client/src/components/render-list.js</a></summary>
 
+<a name="renderList"></a>
+
+## renderList ⇒ <code>string</code>
+
+A function that renders HTML elements in an un-ordered list from an array.
+
+**Returns**: <code>string</code> - Will return un-ordered list and list items in a string.
+
+| Param    | Type               | Description                    |
+| -------- | ------------------ | ------------------------------ |
+| toRender | <code>Array</code> | The array to render into list. |
+
+**Example**
+
+```js
+// [door, window, closet, table] -- '<ul><li>door</li><li>window</li><li>closet</li><li>table</li></ul>
+```
+
 </details>
 
 ---
