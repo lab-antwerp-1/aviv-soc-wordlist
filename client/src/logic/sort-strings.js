@@ -41,16 +41,16 @@ export const sortStrings = (toSort = [], sortType = 'oldest to newest') => {
   if (sortType === 'newest') {
     return tempArray.reverse();
   }
-  if (sortType === 'a to z') {
+  if (sortType === 'a') {
     return tempArray.sort();
   }
-  if (sortType === 'z to a') {
+  if (sortType === 'z') {
     return tempArray.sort().reverse();
   }
-  if (sortType === 'shortest to longest') {
+  if (sortType === 'shortest') {
     return tempArray.sort((a, b) => a.length - b.length);
   }
-  if (sortType === 'longest to shortest') {
+  if (sortType === 'longest') {
     return tempArray.sort((a, b) => a.length - b.length).reverse;
   }
   return tempArray;
