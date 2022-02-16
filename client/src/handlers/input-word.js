@@ -42,12 +42,17 @@ export const inputWord = (event) => {
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
-  if (action === 'add' && !isWord(text)) {
-    warnings.innerText = `${text} is not a word`;
+  if (action === 'add') {
     // ... write some code ...
-  } else if (action === 'remove' && !data.words.includes(text)) {
-    warnings.innerText = `${text} is not in the list`;
-    // ... write some code ...
+    if (!isWord(text)) {
+      warnings.innerText = `${text} is not a word`;
+    }
+  }
+  if (action === 'remove') {
+    if (!data.words.includes(text)) {
+      warnings.innerText = `${text} is not in the list`;
+      // ... write some code ...
+    }
   }
 
   /* -- render new words -- */
