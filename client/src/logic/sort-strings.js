@@ -30,7 +30,7 @@ else if (sortType === 'shortest') {
         return a - b;
       });
       */
-
+/*
 export const sortStrings = (toSort = [], sortType = 'oldest to newest') => {
   const tempArray = [...toSort];
   const sortLength = (par1, par2) => {
@@ -53,25 +53,24 @@ export const sortStrings = (toSort = [], sortType = 'oldest to newest') => {
   }
   return tempArray;
 };
-
-// reference
-/*
-sortStrings = (a = [], b = 'oldest') => {
-          let c;
-          return (
-            (c =
-              'newest' === b
-                ? [...a].reverse()
-                : 'a' === b
-                ? [...a].sort()
-                : 'z' === b
-                ? [...a].sort().reverse()
-                : 'shortest' === b
-                ? [...a].sort((c, a) => c.length - a.length)
-                : 'longest' === b
-                ? [...a].sort((c, a) => c.length - a.length).reverse()
-                : [...a]),
-            c
-          );
-        },
 */
+// reference
+
+export const sortStrings = (a = [], b = 'oldest') => {
+  let c;
+  return (
+    (c =
+      'newest' === b
+        ? [...a].reverse()
+        : 'a' === b
+        ? [...a].sort()
+        : 'z' === b
+        ? [...a].sort().reverse()
+        : 'shortest' === b
+        ? [...a].sort((c, a) => c.length - a.length)
+        : 'longest' === b
+        ? [...a].sort((c, a) => c.length - a.length).reverse()
+        : [...a]),
+    c
+  );
+};
