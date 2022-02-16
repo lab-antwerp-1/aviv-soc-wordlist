@@ -40,20 +40,15 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
   */
   if (sortType === 'newest') {
     return tempArray.reverse();
-  }
-  if (sortType === 'a') {
+  } else if (sortType === 'a') {
     return tempArray.sort();
-  }
-  if (sortType === 'z') {
+  } else if (sortType === 'z') {
     return tempArray.sort().reverse();
-  }
-  if (sortType === 'shortest') {
+  } else if (sortType === 'shortest') {
     return tempArray.sort((a, b) => a.length - b.length);
-  }
-  if (sortType === 'longest') {
+  } else if (sortType === 'longest') {
     return tempArray.sort((a, b) => a.length - b.length).reverse;
-  }
-  return toSort;
+  } else return tempArray;
 };
 
 // reference
