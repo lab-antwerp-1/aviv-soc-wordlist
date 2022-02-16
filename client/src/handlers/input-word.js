@@ -42,9 +42,8 @@ export const inputWord = (event) => {
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
-  if (action === 'add') {
+  if (action === 'add' && !isWord(text)) {
     // ... write some code ...
-    if (!isWord(text)) {
       warnings.innerText = `${text} is not a word`;
     }
     data.words.push(text);
