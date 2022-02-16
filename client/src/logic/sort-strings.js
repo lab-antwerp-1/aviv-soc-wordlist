@@ -33,24 +33,27 @@ else if (sortType === 'shortest') {
 
 export const sortStrings = (toSort = [], sortType = 'oldest') => {
   const tempArray = [...toSort];
-  /*
+  
   const sortLength = (par1, par2) => {
     return par1.length - par2.length;
   };
-  */
+  
   if (sortType === 'newest') {
     return tempArray.reverse();
-  } else if (sortType === 'a') {
-    return tempArray.sort();
-  } else if (sortType === 'z') {
-    return tempArray.sort().reverse();
-  } else if (sortType === 'shortest') {
-    return tempArray.sort((a, b) => a.length - b.length);
-  } else if (sortType === 'longest') {
-    return tempArray.sort((a, b) => a.length - b.length).reverse;
-  } else {
-    return tempArray;
   }
+  if (sortType === 'a') {
+    return tempArray.sort();
+  }
+  if (sortType === 'z') {
+    return tempArray.sort().reverse();
+  }
+  if (sortType === 'shortest') {
+    return tempArray.sort((sortLength);
+  }
+  if (sortType === 'longest') {
+    return tempArray.sort((a, b) => a.length - b.length).reverse;
+  }
+  return tempArray;
 };
 
 // reference
