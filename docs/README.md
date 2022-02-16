@@ -128,30 +128,6 @@ It is called each time the input selection changes.
 
 <details><summary><a href="../../client/src/logic/is-word.js" id="clientsrclogicis-wordjs">../client/src/logic/is-word.js</a></summary>
 
-<a name="isWord"></a>
-
-## isWord ⇒ <code>boolean</code>
-
-Checks if a string is a word. A word contains only letters.
-
-**Returns**: <code>boolean</code> - Whether or not the text is a word.
-
-| Param | Type                | Description                      |
-| ----- | ------------------- | -------------------------------- |
-| text  | <code>string</code> | A string to check for wordiness. |
-
-**Example**
-
-```js
-// roger -- true
-```
-
-**Example**
-
-```js
-// spell-check -- false
-```
-
 </details>
 
 <details><summary><a href="../../client/src/logic/sort-strings.js" id="clientsrclogicsort-stringsjs">../client/src/logic/sort-strings.js</a></summary>
