@@ -38,11 +38,9 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
 
   const sortLength = (par1, par2) => {
     return par1.length - par2.length;
-  }
-const sortAleph = (par) => {
-return par.toLowerCase();
-}
-
+  };
+  const sortAleph = (par) => {
+    return par.toLowerCase();
   };
 
   if (sortType === 'newest') {
