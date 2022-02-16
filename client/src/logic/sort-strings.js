@@ -42,18 +42,18 @@ export const sortStrings = (toSort = [], sortType = 'oldest to newest') => {
     return tempArray.reverse();
   }
   if (sortType === 'a to z') {
-    return [...tempArray].sort();
+    return tempArray.sort();
   }
   if (sortType === 'z to a') {
-    return [...tempArray].sort().reverse();
+    return tempArray.sort().reverse();
   }
   if (sortType === 'shortest to longest') {
-    return [...tempArray].sort((a, b) => a.length - b.length);
+    return tempArray.sort((a, b) => a.length - b.length);
   }
   if (sortType === 'longest to shortest') {
-    return [...tempArray].sort((a, b) => a.length - b.length).reverse;
+    return tempArray.sort((a, b) => a.length - b.length).reverse;
   }
-  return [...toSort];
+  return tempArray;
 };
 
 // reference
