@@ -31,26 +31,26 @@ else if (sortType === 'shortest') {
       });
       */
 
-export const sortStrings = (toSort = [], sortType = 'oldest') => {
+export const sortStrings = (toSort = [], sortType = 'oldest to newest') => {
   const tempArray = [...toSort];
 
   const sortLength = (par1, par2) => {
     return par1.length - par2.length;
   };
 
-  if (sortType === 'newest') {
+  if (sortType === 'newest to oldest') {
     return tempArray.reverse();
   }
-  if (sortType === 'a') {
+  if (sortType === 'a to z') {
     return tempArray.sort();
   }
-  if (sortType === 'z') {
+  if (sortType === 'z to a') {
     return tempArray.sort().reverse();
   }
-  if (sortType === 'shortest') {
+  if (sortType === 'shortest to longest') {
     return tempArray.sort(sortLength);
   }
-  if (sortType === 'longest') {
+  if (sortType === 'longest to shortest') {
     return tempArray.sort(sortLength).reverse();
   }
   return tempArray;
