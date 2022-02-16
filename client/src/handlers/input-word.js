@@ -54,8 +54,9 @@ export const inputWord = (event) => {
     if (!data.words.includes(text)) {
       warnings.innerText = `${text} is not in the list`;
       // ... write some code ...
+    } else {
+      data.words.splice(data.words.indexOf(text), 1);
     }
-    data.words.splice(data.words.indexOf(text), 1);
   }
 
   /* -- render new words -- */
