@@ -12,3 +12,19 @@
  * // spell-check -- false
  */
 export const isWord = (text = '') => /^[a-zA-Z]+$/.test(text);
+
+// reference
+
+/*
+  const charCode = str.charCodeAt(0);
+  if (64 < charCode && charCode < 91) {
+    return String.fromCharCode(charCode + 32);
+  } else if (96 < charCode && charCode < 123) {
+    return String.fromCharCode(charCode - 32);
+  } else {
+    return str; 
+
+     for (let i = 0; i < text.length; i++) {
+      const char = text.charCodeAt(i);
+      if (char < 65 || (char > 90 && char < 97) || char > 122)
+    */

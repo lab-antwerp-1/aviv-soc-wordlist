@@ -19,8 +19,8 @@ export const inputWord = (event) => {
   }
 
   /* -- gather user input from DOM -- */
-  const text = event.target.form.text.value;
-  const action = event.target.value;
+  const text = event.target.form.text.value; // user input word
+  const action = event.target.value; // type of button 'add'/'remove'
 
   /* -- use the input and data to implement the user story --
 
@@ -42,23 +42,7 @@ export const inputWord = (event) => {
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
-  // char code reference
-
-  /*
-  const charCode = str.charCodeAt(0);
-  if (64 < charCode && charCode < 91) {
-    return String.fromCharCode(charCode + 32);
-  } else if (96 < charCode && charCode < 123) {
-    return String.fromCharCode(charCode - 32);
-  } else {
-    return str; 
-
-     for (let i = 0; i < text.length; i++) {
-      const char = text.charCodeAt(i);
-      if (char < 65 || (char > 90 && char < 97) || char > 122)
-    */
-
-  if (action === 'add' && isWord(text)) {
+  if (action === 'add' && !isWord(text)) {
     warnings.innerText = `${text} is not a word`;
     // ... write some code ...
   } else if (action === 'remove' && !data.words.includes(text)) {
