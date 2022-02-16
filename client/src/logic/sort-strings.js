@@ -32,22 +32,27 @@ else if (sortType === 'shortest') {
         return a - b;
       });
       */
-/*
+
 export const sortStrings = (toSort = [], sortType = 'oldest') => {
   const tempArray = [...toSort];
 
   const sortLength = (par1, par2) => {
     return par1.length - par2.length;
+  }
+const sortAleph = (par) => {
+return par.toLowerCase();
+}
+
   };
 
   if (sortType === 'newest') {
     return tempArray.reverse();
   }
   if (sortType === 'a') {
-    return tempArray.sort();
+    return tempArray.sort(sortAleph);
   }
   if (sortType === 'z') {
-    return tempArray.sort().reverse();
+    return tempArray.sort(sortAleph).reverse();
   }
   if (sortType === 'shortest') {
     return tempArray.sort(sortLength);
@@ -57,9 +62,9 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
   }
   return tempArray;
 };
-*/
-// reference
 
+// reference
+/*
 export const sortStrings = (a = [], b = 'oldest') => {
   let c;
   return (
@@ -78,3 +83,4 @@ export const sortStrings = (a = [], b = 'oldest') => {
     c
   );
 };
+*/
