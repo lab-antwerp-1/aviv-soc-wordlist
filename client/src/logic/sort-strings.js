@@ -32,7 +32,7 @@ else if (sortType === 'shortest') {
         return a - b;
       });
       */
-
+/*
 export const sortStrings = (toSort = [], sortType = 'oldest') => {
   const tempArray = [...toSort];
 
@@ -57,9 +57,9 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
   }
   return tempArray;
 };
-
+*/
 // reference
-/*
+
 export const sortStrings = (a = [], b = 'oldest') => {
   let c;
   return (
@@ -78,4 +78,3 @@ export const sortStrings = (a = [], b = 'oldest') => {
     c
   );
 };
-*/
