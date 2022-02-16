@@ -48,7 +48,9 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
     return tempArray.sort((a, b) => a.length - b.length);
   } else if (sortType === 'longest') {
     return tempArray.sort((a, b) => a.length - b.length).reverse;
-  } else return tempArray;
+  } else {
+    return tempArray;
+  }
 };
 
 // reference
