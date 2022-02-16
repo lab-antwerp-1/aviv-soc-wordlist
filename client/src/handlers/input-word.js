@@ -44,7 +44,7 @@ export const inputWord = (event) => {
 
   if (action === 'add') {
     // ... write some code ...
-    if (isWord(text)) {
+    if (!isWord(text)) {
       warnings.innerText = `${text} is not a word`;
     }
     data.words.push(text);
