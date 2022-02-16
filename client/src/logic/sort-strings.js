@@ -52,6 +52,8 @@ export const sortStrings = (toSort = [], sortType = 'oldest to newest') => {
   }
   if (sortType === 'longest to shortest') {
     return [...tempArray].sort((a, b) => a.length - b.length).reverse;
+  }
+  return [...toSort];
 };
 
 // reference
