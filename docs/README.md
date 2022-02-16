@@ -125,32 +125,18 @@ Checks if a string is a word. A word contains only letters.
 **Example**
 
 ```js
-// ... write this!
+// roger -- true
+```
+
+**Example**
+
+```js
+// spell-check -- false
 ```
 
 </details>
 
 <details><summary><a href="../../client/src/logic/sort-strings.js" id="clientsrclogicsort-stringsjs">../client/src/logic/sort-strings.js</a></summary>
-
-<a name="sortStrings"></a>
-
-## sortStrings ⇒ <code>Array.&lt;string&gt;</code>
-
-Sorts an array of strings in different ways.
-It does not modify the argument (no side-effects).
-
-**Returns**: <code>Array.&lt;string&gt;</code> - A new sorted array containing the same strings as toSort.
-
-| Param      | Type                              | Default                                     | Description                                                                                                                                                                                                                                                                                                             |
-| ---------- | --------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [toSort]   | <code>Array.&lt;string&gt;</code> | <code>&#x27;&#x27;</code>                   | The array of strings to sort.                                                                                                                                                                                                                                                                                           |
-| [sortType] | <code>string</code>               | <code>&quot;&#x27;oldest&#x27;&quot;</code> | How to sort the strings, 6 options. - oldest: from oldest to newest. - newest: from newest to oldest. - shortest: from shortest to longest. - longest: from longest to shortest. - a: alphabetical order. - z: reverse alphabetical order. If the sortType is not one of these 6 options, a copy of toSort is returned. |
-
-**Example**
-
-```js
-// ... write this!
-```
 
 </details>
 

@@ -1,6 +1,6 @@
 # constraints
 
-_Some boundaries around our project._
+- _Some boundaries around our project._
 
 ## External
 

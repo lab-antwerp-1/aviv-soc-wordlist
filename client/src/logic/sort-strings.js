@@ -15,7 +15,8 @@
  * @example
  *
  * // [Monday, Tuesday, Wednesday, Thursday], 'shortest' --> [Monday, Tuesday, Thursday, Wednesday]
- *  * @example
+ * @example
+ *
  * // [Monday, Tuesday, Wednesday, Thursday], 'z' --> [Wednesday, Tuesday, Thursday, Monday]
  */
 
@@ -30,15 +31,30 @@ else if (sortType === 'shortest') {
       });
       */
 
-export const sortStrings = (toSort = [], sortType = 'oldest') => {
+export const sortStrings = (toSort = [], sortType = 'oldest to newest') => {
   const tempArray = [...toSort];
-  if (sortType === 'newest') {
+  const sortLength = (par1 = '', par2 = '') => {
+    return par1.length - par2.length;
+  };
+  if (sortType === 'newest to oldest') {
     return tempArray.reverse();
+  }
+  if (sortType === 'a to z') {
+    return [...tempArray].sort();
+  }
+  if (sortType === 'z to a') {
+    return [...tempArray].sort().reverse();
+  }
+  if (sortType === 'shortest to longest') {
+    return [...tempArray].sort(sortLength);
+  }
+  if (sortType === 'longest to shortest') {
+    return [...tempArray].sort(sortLength).reverse;
   }
   return tempArray;
 };
 
-// refeence
+// reference
 /*
 sortStrings = (a = [], b = 'oldest') => {
           let c;
