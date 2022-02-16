@@ -19,13 +19,10 @@
 export const isWord = (text = '') => {
   for (let i = 0; i < text.length; i++) {
     const char = text.charCodeAt(i);
-    if (
-      char < 65 ||
-      (char > 90 && char < 97) ||
-      char > 122 ||
-      text === '' ||
-      text.length === 0
-    ) {
+    if (char < 65 || (char > 90 && char < 97) || char > 122) {
+      return false;
+    }
+    if (text === '' || text.length === 0) {
       return false;
     }
   }
