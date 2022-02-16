@@ -39,18 +39,15 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
   const sortLength = (par1, par2) => {
     return par1.length - par2.length;
   };
-  const sortAleph = (par) => {
-    return par.toLowerCase();
-  };
 
   if (sortType === 'newest') {
     return tempArray.reverse();
   }
   if (sortType === 'a') {
-    return tempArray.sort(sortAleph);
+    return tempArray.sort();
   }
   if (sortType === 'z') {
-    return tempArray.sort(sortAleph).reverse();
+    return tempArray.sort().reverse();
   }
   if (sortType === 'shortest') {
     return tempArray.sort(sortLength);
