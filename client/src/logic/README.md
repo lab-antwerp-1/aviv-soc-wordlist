@@ -115,4 +115,19 @@ export const sortStrings = (a = [], b = 'oldest') => {
     c
   );
 };
+
+// Evan reference
+
+export const isWord = (text = '') => /^[a-zA-Z]+$/.test(text);
+
+const isWord = (text = '') => {
+  const charCode = text.charCodeAt(0);
+  if (64 < charCode && charCode < 91) {
+    return String.fromCharCode(charCode + 32);
+  } else if (96 < charCode && charCode < 123) {
+    return String.fromCharCode(charCode - 32);
+  } else {
+    return str;
+  }
+};
 ```
