@@ -12,10 +12,6 @@
  * // spell-check -- false
  */
 
-// Evan reference
-
-// export const isWord = (text = '') => /^[a-zA-Z]+$/.test(text);
-
 export const isWord = (text = '') => {
   if (text === '' || text.length === 0) {
     return false;
@@ -28,17 +24,3 @@ export const isWord = (text = '') => {
   }
   return true;
 };
-
-/*
-
-const isWord = (text = '') => {
-  const charCode = text.charCodeAt(0);
-  if (64 < charCode && charCode < 91) {
-    return String.fromCharCode(charCode + 32);
-  } else if (96 < charCode && charCode < 123) {
-    return String.fromCharCode(charCode - 32);
-  } else {
-    return str; 
-  }
-}
-*/
