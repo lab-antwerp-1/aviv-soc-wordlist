@@ -100,6 +100,7 @@ p {
 .input__box:focus {
   border-color: var(--blue-dark);
 }
+
 .buttons {
   margin-top: 12%;
   display: flex;
@@ -132,6 +133,7 @@ p {
 .input__add:hover {
   background-color: var(--blue-medium);
 }
+
 .input__remove:hover {
   background-color: var(--pink-medium);
 }
