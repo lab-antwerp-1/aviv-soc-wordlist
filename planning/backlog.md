@@ -32,6 +32,10 @@
 
 - [ ] _there is css styling to the different page elements_
 
+> as a user/developer i can see the code for the page
+
+- [ ] _there is a link to the github repo in the footer_
+
 ## Could have's
 
 > As a user I can be sure my list only includes English words
