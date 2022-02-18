@@ -84,8 +84,7 @@ p {
 .input__box {
   width: 100%;
   border-radius: 1rem;
-  border: none;
-  outline: none;
+  appearance: none;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   color: var(--grey-dark);
@@ -115,16 +114,19 @@ p {
   border-radius: 2rem;
   color: var(--blue-light);
   font-family: var(--paragraph-font);
+  cursor: pointer;
 }
 
 .input__remove {
   background-color: var(--pink-dark);
+  border: none;
   appearance: none;
   padding-bottom: 0.4rem;
   padding-top: 0.2rem;
   border-radius: 2rem;
   color: var(--pink-light);
   font-family: var(--paragraph-font);
+  cursor: pointer;
 }
 
 .input__add:hover {
@@ -162,6 +164,7 @@ p {
 }
 
 .input__sort {
+  cursor: pointer;
   width: 64%;
   border-radius: 1rem;
   appearance: none;
@@ -172,6 +175,54 @@ p {
   outline: 0.1rem solid var(--grey-medium);
 }
 
+.input__lihead {
+  font-family: var(--header-font);
+  font-size: 180%;
+  color: var(--blue-medium);
+}
+
+.input__list {
+  align-self: flex-start;
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+  font-size: 120%;
+  line-height: 1.8rem;
+  color: var(--blue-dark);
+}
+
 /* end of input section */
+
+/* footer */
+
+.footer {
+  margin: 8%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__p {
+  margin-left: 3.4rem;
+  padding-right: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  width: 42%;
+}
+
+.icon__colour {
+  fill: var(--grey-medium);
+}
+
+.icon__colour:hover {
+  fill: var(--blue-medium);
+}
+
+.icon__colour:active {
+  fill: var(--blue-dark);
+}
+
+/* end of footer */
 
 /* end of body */
