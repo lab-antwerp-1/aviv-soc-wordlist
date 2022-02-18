@@ -32,27 +32,21 @@ html {
 
 /* intro section */
 
-.intro {
-  font-family: var(--paragraph-font);
-  color: var(--grey-dark);
-}
-.intro:hover {
-  font-family: var(--paragraph-font);
-  color: var(--warning);
-}
-
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .intro {
   color: var(--grey-dark);
 }
+
 .intro h1 {
   font-size: 400%;
   text-align: center;
 }
+
 .intro p {
   font-size: 160%;
   line-height: 1.6rem;
@@ -65,9 +59,11 @@ html {
 .input {
   margin: 2rem;
 }
+
 .input h2 {
   text-align: center;
 }
+
 .input__head {
   font-family: var(--header-font);
 }
