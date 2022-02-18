@@ -15,3 +15,104 @@
 
 - _is-words logic --- returns boolean_
 - _sort-strings logic --- returns string array_
+
+### references
+
+// case sensitive reference
+/_
+https://www.tutorialspoint.com/case-sensitive-sort-in-javascript
+s
+const caseSensitiveSort = (arr = []) => {
+const sorter = (a, b) => {
+if (a === b){
+return 0
+};
+if (a.charAt(0) === b.charAt(0)){
+return sorter(a.slice(1), b.slice(1))
+}
+if(a.charAt(0).toLowerCase() === b.charAt(0).toLowerCase()){
+if(/^[a-z]/.test(a.charAt(0)) && /^[A-Z]/.test(b.charAt(0))){
+return -1;
+};
+if(/^[a-z]/.test(b.charAt(0)) && /^[A-Z]/.test(a.charAt(0))){
+return 1;
+};
+};
+return a.localeCompare(b);
+};
+arr.sort(sorter);
+}
+caseSensitiveSort(arr);
+console.log(arr);
+_/
+
+// Evan reference
+/\*
+export const sortStrings = (a = [], b = 'oldest') => {
+let c;
+return (
+(c =
+'newest' === b
+? [...a].reverse()
+: 'a' === b
+? [...a].sort()
+: 'z' === b
+? [...a].sort().reverse()
+: 'shortest' === b
+? [...a].sort((c, a) => c.length - a.length)
+: 'longest' === b
+? [...a].sort((c, a) => c.length - a.length).reverse()
+: [...a]),
+c
+);
+};
+
+```js
+// case sensitive reference
+
+//www.tutorialspoint.com/case-sensitive-sort-in-javascript
+https: s;
+const caseSensitiveSort = (arr = []) => {
+  const sorter = (a, b) => {
+    if (a === b) {
+      return 0;
+    }
+    if (a.charAt(0) === b.charAt(0)) {
+      return sorter(a.slice(1), b.slice(1));
+    }
+    if (a.charAt(0).toLowerCase() === b.charAt(0).toLowerCase()) {
+      if (/^[a-z]/.test(a.charAt(0)) && /^[A-Z]/.test(b.charAt(0))) {
+        return -1;
+      }
+      if (/^[a-z]/.test(b.charAt(0)) && /^[A-Z]/.test(a.charAt(0))) {
+        return 1;
+      }
+    }
+    return a.localeCompare(b);
+  };
+  arr.sort(sorter);
+};
+caseSensitiveSort(arr);
+console.log(arr);
+
+// Evan reference
+
+export const sortStrings = (a = [], b = 'oldest') => {
+  let c;
+  return (
+    (c =
+      'newest' === b
+        ? [...a].reverse()
+        : 'a' === b
+        ? [...a].sort()
+        : 'z' === b
+        ? [...a].sort().reverse()
+        : 'shortest' === b
+        ? [...a].sort((c, a) => c.length - a.length)
+        : 'longest' === b
+        ? [...a].sort((c, a) => c.length - a.length).reverse()
+        : [...a]),
+    c
+  );
+};
+```

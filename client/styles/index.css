@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-
+  background-color: var(--grey-light);
   /* cancel auto layout margins */
 }
 
@@ -25,11 +25,47 @@ html {
 
   /* ^ set 1rem to 10px */
 }
-p {
+
+/* body */
+/* intro section */
+
+.intro {
   font-family: var(--paragraph-font);
   color: var(--grey-dark);
 }
-h1 {
-  font-family: var(--header-font);
-  color: var(--pink-medium);
+.intro:hover {
+  font-family: var(--paragraph-font);
+  color: var(--warning);
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro {
+  color: var(--grey-dark);
+}
+.intro h1 {
+  font-size: 400%;
+  text-align: center;
+}
+.intro p {
+  font-size: 160%;
+  line-height: 1.6rem;
+}
+
+/* end of intro section */
+/* input section */
+.input {
+  margin: 2rem;
+}
+.input h2 {
+  text-align: center;
+}
+.input__head {
+  font-family: var(--header-font);
+}
+/* end of input section */
+
+/* end of body */
