@@ -40,14 +40,22 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
     return par1.length - par2.length;
   };
 
+  const sortCase = (par1, par2) => {
+      if (par1.charAt(0) === par2.charAt(0)) {
+        return 0;
+      }
+      return a.localeCompare(b);
+    };
+  };
+
   if (sortType === 'newest') {
     return tempArray.reverse();
   }
   if (sortType === 'a') {
-    return tempArray.sort();
+    return tempArray.sort(sortCase);
   }
   if (sortType === 'z') {
-    return tempArray.sort().reverse();
+    return tempArray.sort(sortCase).reverse();
   }
   if (sortType === 'shortest') {
     return tempArray.sort(sortLength);
@@ -58,7 +66,35 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
   return tempArray;
 };
 
-// reference
+// case sensitive reference
+/*
+https://www.tutorialspoint.com/case-sensitive-sort-in-javascript
+s
+const caseSensitiveSort = (arr = []) => {
+   const sorter = (a, b) => {
+      if (a === b){
+         return 0
+      };
+      if (a.charAt(0) === b.charAt(0)){
+         return sorter(a.slice(1), b.slice(1))
+      }
+      if(a.charAt(0).toLowerCase() === b.charAt(0).toLowerCase()){
+         if(/^[a-z]/.test(a.charAt(0)) && /^[A-Z]/.test(b.charAt(0))){
+            return -1;
+         };
+         if(/^[a-z]/.test(b.charAt(0)) && /^[A-Z]/.test(a.charAt(0))){
+            return 1;
+         };
+      };
+      return a.localeCompare(b);
+   };
+   arr.sort(sorter);
+}
+caseSensitiveSort(arr);
+console.log(arr);
+*/
+
+// Evan reference
 /*
 export const sortStrings = (a = [], b = 'oldest') => {
   let c;
