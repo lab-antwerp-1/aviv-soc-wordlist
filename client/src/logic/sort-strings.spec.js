@@ -51,7 +51,7 @@ describe('sorts the strings in an array in different ways', () => {
       ];
       expect(
         sortStrings(
-          ['aa', 'Aa', 'ab', 'aB', 'Ab', 'AB', 'ba', 'bA', 'Ba', 'BA'],
+          ['aa', 'Aa', 'bA', 'aB', 'Ab', 'AB', 'ab', 'ba', 'BA', 'Ba'],
           'a',
         ),
       ).toEqual(expected);
