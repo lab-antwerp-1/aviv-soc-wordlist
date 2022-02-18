@@ -36,25 +36,34 @@
       </div>
       <!-- end of intro section -->
       <!-- input section -->
-      <div id="input">
+      <div id="input" class="input">
         <h2 class="input__head">Enter Word</h2>
         <form id="input-form">
-          <input class="input__box" name="text" placeholder="new word" />
-          <input class="input__add" type="button" value="add" />
-          <input class="input__remove" type="button" value="remove" />
+          <input
+            id="box"
+            class="input__box"
+            name="text"
+            placeholder="New Word"
+          />
+          <div class="buttons">
+            <input class="input__add" type="button" value="add" />
+            <input class="input__remove" type="button" value="remove" />
+          </div>
         </form>
         <code id="warnings" class="warning"></code>
         <br />
         <!-- sort: -->
-        <label for="select">Sort by:</label>
-        <select class="input__sort" id="sort-type">
-          <option value="oldest">old -> new</option>
-          <option value="newest">new -> old</option>
-          <option value="a">a -> z</option>
-          <option value="z">z -> a</option>
-          <option value="shortest">short -> long</option>
-          <option value="longest">long -> short</option>
-        </select>
+        <div class="opt">
+          <label class="opt__lbl" for="select">Sort by:</label>
+          <select class="input__sort" id="sort-type">
+            <option value="oldest">old -> new</option>
+            <option value="newest">new -> old</option>
+            <option value="a">a -> z</option>
+            <option value="z">z -> a</option>
+            <option value="shortest">short -> long</option>
+            <option value="longest">long -> short</option>
+          </select>
+        </div>
         <h2 class="input__lihead">Your list:</h2>
         <div class="input__list" id="list-container"></div>
       </div>
