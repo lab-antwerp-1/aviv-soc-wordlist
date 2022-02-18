@@ -94,6 +94,14 @@
 
   - [ ] `css` use classes to stylize page elements
 
+> as a user/developer i can see the code for the page
+
+- this will be developed on `file-setup` branch
+
+  - [ ] `html` use `p`, `a` and `svg` to create footer section
+
+- [ ] `css` use `footer` class to stylize footer icon
+
 ### could have
 
 > As a user I can be sure my list only includes English words
