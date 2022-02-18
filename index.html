@@ -9,35 +9,46 @@
     <link href="./client/styles/index.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="intro">
-      <h1>List Maker</h1>
-      <p>
-        Welcome! In this page you can create and edit lists. Please type a word
-        in the box below and press the 'add' button to add your word to the
-        list.<br />Use the 'remove' button to remove words from your list.
+    <!-- page container -->
+    <div class="page">
+      <!-- intro section -->
+      <div class="intro">
+        <h1>List Maker</h1>
+        <p>
+          Welcome! In this page you can create and edit lists. Please type a
+          word in the box below and press the 'add' button to add your word to
+          the list.<br />Use the 'remove' button to remove words from your list.
+          <br />
+          Use the sort drop bar to edit the order of words on your list.<br />
+          have fun!
+        </p>
+      </div>
+      <!-- end of intro section -->
+      <!-- input section -->
+      <div id="input">
+        <form id="input-form">
+          <input name="text" placeholder="new word" />
+          <input type="button" value="add" />
+          <input type="button" value="remove" />
+        </form>
+        <code id="warnings" class="warning"></code>
         <br />
-        Use the sort drop bar to edit the order of words on your list.<br />
-        have fun!
-      </p>
-    </div>
-    <div id="input">
-      <form id="input-form">
-        <input name="text" placeholder="new word" />
-        <input type="button" value="add" />
-        <input type="button" value="remove" />
-      </form>
-      <code id="warnings" class="warning"></code>
-      <br />
-      sort:
-      <select id="sort-type">
-        <option value="oldest">old -> new</option>
-        <option value="newest">new -> old</option>
-        <option value="a">a -> z</option>
-        <option value="z">z -> a</option>
-        <option value="shortest">short -> long</option>
-        <option value="longest">long -> short</option>
-      </select>
-      <div id="list-container"></div>
+        sort:
+        <select id="sort-type">
+          <option value="oldest">old -> new</option>
+          <option value="newest">new -> old</option>
+          <option value="a">a -> z</option>
+          <option value="z">z -> a</option>
+          <option value="shortest">short -> long</option>
+          <option value="longest">long -> short</option>
+        </select>
+        <div id="list-container"></div>
+      </div>
+      <!-- end of input section -->
+      <!-- footer -->
+      <div class="footer"></div>
+      <!-- end of footer -->
+      <!-- end of page container -->
     </div>
 
     <script type="module" src="./client/src/init/index.js"></script>
