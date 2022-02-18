@@ -1,5 +1,5 @@
 :root {
-  --poem-font: 'Estonia', cursive;
+  --header-font: 'Mukta', serif;
   --paragraph-font: 'Inconsolata', serif;
   --coffee-black: #221700;
   --coffee-dark: rgba(118, 80, 0, 1);
@@ -25,4 +25,7 @@ html {
 }
 p {
   font-family: var(--paragraph-font);
+}
+h1 h2 {
+  font-family: var(--header-font);
 }
