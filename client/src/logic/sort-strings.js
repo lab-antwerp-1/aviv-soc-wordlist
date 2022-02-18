@@ -41,9 +41,6 @@ export const sortStrings = (toSort = [], sortType = 'oldest') => {
   };
 
   const sortCase = (par1, par2) => {
-    if (par1.charAt(0) === par2.charAt(0)) {
-      return 0;
-    }
     return par1.localeCompare(par2);
   };
 
