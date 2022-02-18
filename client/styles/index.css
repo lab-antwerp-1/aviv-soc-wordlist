@@ -11,12 +11,14 @@
   --pink-medium: rgba(186, 126, 144, 1);
   --pink-dark: rgba(109, 64, 78, 1);
   --warning: rgba(168, 72, 102, 1);
+
   /* setup colour schemes and font families for pages */
 }
 
 body {
   margin: 0;
   background-color: var(--grey-light);
+
   /* cancel auto layout margins */
 }
 
@@ -27,6 +29,7 @@ html {
 }
 
 /* body */
+
 /* intro section */
 
 .intro {
@@ -56,7 +59,9 @@ html {
 }
 
 /* end of intro section */
+
 /* input section */
+
 .input {
   margin: 2rem;
 }
@@ -66,6 +71,7 @@ html {
 .input__head {
   font-family: var(--header-font);
 }
+
 /* end of input section */
 
 /* end of body */
