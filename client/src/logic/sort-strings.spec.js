@@ -71,7 +71,7 @@ describe('sorts the strings in an array in different ways', () => {
     it('mixed case items', () => {
       const expected = ['BA', 'Ba', 'bA', 'ba', 'AA', 'Aa', 'aA', 'aa'];
       expect(
-        sortStrings(['BA', 'Ba', 'bA', 'ba', 'AA', 'Aa', 'aA', 'aa'], 'z'),
+        sortStrings(['BA', 'AA', 'bA', 'aA', 'ba', 'Aa', 'Ba', 'aa'], 'z'),
       ).toEqual(expected);
     });
   });
