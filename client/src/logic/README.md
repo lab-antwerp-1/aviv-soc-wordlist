@@ -18,10 +18,10 @@
 
 ### references
 
+```js
+
 // case sensitive reference
-/_
-https://www.tutorialspoint.com/case-sensitive-sort-in-javascript
-s
+// https://www.tutorialspoint.com/case-sensitive-sort-in-javascripts
 const caseSensitiveSort = (arr = []) => {
 const sorter = (a, b) => {
 if (a === b){
@@ -47,7 +47,7 @@ console.log(arr);
 _/
 
 // Evan reference
-/\*
+
 export const sortStrings = (a = [], b = 'oldest') => {
 let c;
 return (
@@ -67,11 +67,9 @@ c
 );
 };
 
-```js
 // case sensitive reference
 
 //www.tutorialspoint.com/case-sensitive-sort-in-javascript
-https: s;
 const caseSensitiveSort = (arr = []) => {
   const sorter = (a, b) => {
     if (a === b) {
