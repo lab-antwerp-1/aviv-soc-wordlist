@@ -20,8 +20,20 @@
 
 ```js
 
+// first attempt - didn't work
+
+  const lengthArray = [];
+
+else if (sortType === 'shortest') {
+    for (const ele of tempArray) {
+      lengthArray.push(ele.length);
+      lengthArray.sort((a, b) => {
+        return a - b;
+      });
+
 // case sensitive reference
 // https://www.tutorialspoint.com/case-sensitive-sort-in-javascripts
+
 const caseSensitiveSort = (arr = []) => {
 const sorter = (a, b) => {
 if (a === b){
@@ -44,7 +56,7 @@ arr.sort(sorter);
 }
 caseSensitiveSort(arr);
 console.log(arr);
-_/
+}
 
 // Evan reference
 
@@ -65,67 +77,5 @@ return (
 : [...a]),
 c
 );
-};
-
-// case sensitive reference
-
-//www.tutorialspoint.com/case-sensitive-sort-in-javascript
-const caseSensitiveSort = (arr = []) => {
-  const sorter = (a, b) => {
-    if (a === b) {
-      return 0;
-    }
-    if (a.charAt(0) === b.charAt(0)) {
-      return sorter(a.slice(1), b.slice(1));
-    }
-    if (a.charAt(0).toLowerCase() === b.charAt(0).toLowerCase()) {
-      if (/^[a-z]/.test(a.charAt(0)) && /^[A-Z]/.test(b.charAt(0))) {
-        return -1;
-      }
-      if (/^[a-z]/.test(b.charAt(0)) && /^[A-Z]/.test(a.charAt(0))) {
-        return 1;
-      }
-    }
-    return a.localeCompare(b);
-  };
-  arr.sort(sorter);
-};
-caseSensitiveSort(arr);
-console.log(arr);
-
-// Evan reference
-
-export const sortStrings = (a = [], b = 'oldest') => {
-  let c;
-  return (
-    (c =
-      'newest' === b
-        ? [...a].reverse()
-        : 'a' === b
-        ? [...a].sort()
-        : 'z' === b
-        ? [...a].sort().reverse()
-        : 'shortest' === b
-        ? [...a].sort((c, a) => c.length - a.length)
-        : 'longest' === b
-        ? [...a].sort((c, a) => c.length - a.length).reverse()
-        : [...a]),
-    c
-  );
-};
-
-// Evan reference
-
-export const isWord = (text = '') => /^[a-zA-Z]+$/.test(text);
-
-const isWord = (text = '') => {
-  const charCode = text.charCodeAt(0);
-  if (64 < charCode && charCode < 91) {
-    return String.fromCharCode(charCode + 32);
-  } else if (96 < charCode && charCode < 123) {
-    return String.fromCharCode(charCode - 32);
-  } else {
-    return str;
-  }
 };
 ```
