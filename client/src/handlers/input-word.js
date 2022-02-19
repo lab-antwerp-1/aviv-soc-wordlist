@@ -43,7 +43,6 @@ export const inputWord = (event) => {
   warnings.innerText = '';
 
   if (action === 'add') {
-    // ... write some code ...
     if (!isWord(text)) {
       warnings.innerText = `${text} is not a word`;
     } else {
@@ -53,7 +52,6 @@ export const inputWord = (event) => {
   if (action === 'remove') {
     if (!data.words.includes(text)) {
       warnings.innerText = `${text} is not in the list`;
-      // ... write some code ...
     } else {
       data.words.splice(data.words.indexOf(text), 1);
     }

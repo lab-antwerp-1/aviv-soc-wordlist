@@ -20,19 +20,6 @@
  * // [Monday, Tuesday, Wednesday, Thursday], 'z' --> [Wednesday, Tuesday, Thursday, Monday]
  */
 
-// first attempt - didn't work
-
-/*
-  const lengthArray = [];
-
-else if (sortType === 'shortest') {
-    for (const ele of tempArray) {
-      lengthArray.push(ele.length);
-      lengthArray.sort((a, b) => {
-        return a - b;
-      });
-      */
-
 export const sortStrings = (toSort = [], sortType = 'oldest') => {
   const tempArray = [...toSort];
 
