@@ -36,6 +36,26 @@ describe('sorts the strings in an array in different ways', () => {
       const expected = ['a', 'b', 'c', 'd'];
       expect(sortStrings(['b', 'd', 'c', 'a'], 'a')).toEqual(expected);
     });
+    it('mixed case items', () => {
+      const expected = [
+        'aa',
+        'Aa',
+        'ab',
+        'aB',
+        'Ab',
+        'AB',
+        'ba',
+        'bA',
+        'Ba',
+        'BA',
+      ];
+      expect(
+        sortStrings(
+          ['aa', 'Aa', 'bA', 'aB', 'Ab', 'AB', 'ab', 'ba', 'BA', 'Ba'],
+          'a',
+        ),
+      ).toEqual(expected);
+    });
   });
   describe('reverse-alphabetical order', () => {
     it('empty array', () => {
@@ -47,6 +67,12 @@ describe('sorts the strings in an array in different ways', () => {
     it('4 items', () => {
       const expected = ['d', 'c', 'b', 'a'];
       expect(sortStrings(['b', 'd', 'c', 'a'], 'z')).toEqual(expected);
+    });
+    it('mixed case items', () => {
+      const expected = ['BA', 'Ba', 'bA', 'ba', 'AA', 'Aa', 'aA', 'aa'];
+      expect(
+        sortStrings(['BA', 'AA', 'bA', 'aA', 'ba', 'Aa', 'Ba', 'aa'], 'z'),
+      ).toEqual(expected);
     });
   });
   describe('longest to shortest', () => {

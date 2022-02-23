@@ -14,6 +14,37 @@
  * @returns {string[]} A new sorted array containing the same strings as toSort.
  * @example
  *
- * // ... write this!
+ * // [Monday, Tuesday, Wednesday, Thursday], 'shortest' --> [Monday, Tuesday, Thursday, Wednesday]
+ * @example
+ *
+ * // [Monday, Tuesday, Wednesday, Thursday], 'z' --> [Wednesday, Tuesday, Thursday, Monday]
  */
-export const sortStrings = () => {};
+
+export const sortStrings = (toSort = [], sortType = 'oldest') => {
+  const tempArray = [...toSort];
+
+  const sortLength = (par1, par2) => {
+    return par1.length - par2.length;
+  };
+
+  const sortCase = (par1, par2) => {
+    return par1.localeCompare(par2);
+  };
+
+  if (sortType === 'newest') {
+    return tempArray.reverse();
+  }
+  if (sortType === 'a') {
+    return tempArray.sort(sortCase);
+  }
+  if (sortType === 'z') {
+    return tempArray.sort(sortCase).reverse();
+  }
+  if (sortType === 'shortest') {
+    return tempArray.sort(sortLength);
+  }
+  if (sortType === 'longest') {
+    return tempArray.sort(sortLength).reverse();
+  }
+  return tempArray;
+};

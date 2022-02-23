@@ -19,8 +19,8 @@ export const inputWord = (event) => {
   }
 
   /* -- gather user input from DOM -- */
-  const text = event.target.form.text.value;
-  const action = event.target.value;
+  const text = event.target.form.text.value; // user input word
+  const action = event.target.value; // type of button 'add'/'remove'
 
   /* -- use the input and data to implement the user story --
 
@@ -43,9 +43,18 @@ export const inputWord = (event) => {
   warnings.innerText = '';
 
   if (action === 'add') {
-    // ... write some code ...
-  } else if (action === 'remove') {
-    // ... write some code ...
+    if (!isWord(text)) {
+      warnings.innerText = `${text} is not a word`;
+    } else {
+      data.words.push(text);
+    }
+  }
+  if (action === 'remove') {
+    if (!data.words.includes(text)) {
+      warnings.innerText = `${text} is not in the list`;
+    } else {
+      data.words.splice(data.words.indexOf(text), 1);
+    }
   }
 
   /* -- render new words -- */
